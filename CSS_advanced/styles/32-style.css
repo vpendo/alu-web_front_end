@@ -1,6 +1,8 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
+/* Root Variables */
 :root {
+    /* Font Weights and Sizes */
     --font-weight-regular: 400;
     --font-weight-bold: 700;
     --font-size-small: 1.2rem;
@@ -11,15 +13,21 @@
     --font-size-xxx-large: 6rem;
     --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    /* Color Palette */
     --color-primary: #d73953;
     --color-black: #090909;
     --color-white: #ffffff;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
+
+    /* Line Heights */
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
+
+    /* Section Styles */
     --section-tagline-transform: uppercase;
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
@@ -29,6 +37,8 @@
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
+
+    /* Navigation Styles */
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
@@ -36,9 +46,8 @@
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-white);
-    --section-tagline-margin: 0;
 
-    /* Custom properties for buttons */
+    /* Button Styles */
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
     --button-border: 0.2rem solid var(--color-primary);
@@ -49,18 +58,12 @@
     --button-hover-text-decoration: none;
     --button-hover-background: var(--color-primary);
 
-    --header-padding: 4rem 0 0;
-    --header-logo-position: relative;
-    --header-logo-link-display: inline-block;
-    --header-logo-link-position: absolute;
-    --header-logo-link-top: -1rem;
-    --header-logo-link-left: 0;
-
+    /* Transition Styles */
     --transition-duration: .3s;
     --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 
-/* New styles for dark theme sections */
+/* Dark Theme Section Styles */
 [data-section-theme="dark"] {
     --text-color: var(--color-white);
     --section-title-color: var(--color-white);
@@ -73,6 +76,7 @@
     color: var(--section-title-color);
 }
 
+/* Global Styles */
 *,
 *::before,
 *::after {
@@ -92,16 +96,12 @@ body {
     line-height: var(--line-height-base);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
 }
 
+/* Link Styles */
 a:link {
     text-decoration: none;
     color: inherit;
@@ -119,30 +119,12 @@ a:active {
     background-color: var(--color-light-grey);
 }
 
+/* Visually Hidden Elements */
 .visually-hidden {
     display: none;
 }
 
-.card-category {
-    color: var(--color-primary);
-}
-
-.section-title {
-    margin: var(--section-title-margin);
-    color: var(--section-title-color);
-    font-family: var(--font-family-title);
-    font-size: var(--font-size-xx-large);
-    font-weight: var(--font-weight-bold);
-}
-
-.section-tagline {
-    color: var(--color-primary);
-    font-family: var(--font-family-title);
-    text-transform: var(--section-tagline-transform);
-    font-weight: var(--font-weight-bold);
-    margin: var(--section-tagline-margin);
-}
-
+/* Section and Container Styles */
 .container {
     width: 960px;
     margin-left: auto;
@@ -166,6 +148,7 @@ a:active {
     text-align: var(--section-footer-align);
 }
 
+/* Navigation Menu Styles */
 .navbar-menu {
     float: right;
 }
@@ -203,7 +186,6 @@ a:active {
     background-color: var(--color-white);
     width: 0;
     height: 0.2rem;
-
     transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
@@ -212,31 +194,7 @@ a:active {
     width: 100%;
 }
 
-ul.row {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-[class^="col-"] {
-    float: left;
-    padding: 0.5rem;
-}
-
-.col-1-3 {
-    width: 33.33%;
-}
-
-.col-1-2 {
-    width: 50%;
-}
-
+/* Footer Styles */
 .footer {
     padding: var(--footer-padding);
 }
@@ -253,22 +211,6 @@ ul.row {
     fill: var(--text-color);
 }
 
-.card-services .card-title {
-    margin: 0;
-}
-
-.card-services a {
-    display: block;
-    padding: 2rem;
-    background-color: var(--color-light-grey);
-}
-
-.card-services a:hover {
-    color: var(--color-white);
-    background-color: var(--color-primary);
-    text-decoration: none;
-}
-
 .footer-copyright {
     margin: 0;
     font-size: var(--font-size-small);
@@ -279,7 +221,7 @@ ul.row {
     text-align: right;
 }
 
-/* Button styles */
+/* Button Styles */
 .button {
     display: var(--button-display);
     padding: var(--button-padding);
@@ -293,10 +235,10 @@ ul.row {
     color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
     background-color: var(--button-hover-background);
-
     transition: all var(--transition-duration) var(--transition-cubic-bezier);
 }
 
+/* Testimonial Card Styles */
 .card-testimonial {
     text-align: center;
 }
@@ -327,6 +269,7 @@ ul.row {
     color: var(--color-primary);
 }
 
+/* Hero Section Styles */
 .section-hero {
     background-size: 90rem auto;
 }
@@ -339,6 +282,7 @@ ul.row {
     padding: 10rem 40rem 2rem 0;
 }
 
+/* Header Styles */
 .header {
     padding: var(--header-padding);
 }
@@ -354,6 +298,7 @@ ul.row {
     left: var(--header-logo-link-left);
 }
 
+/* Work Card Styles */
 .card-work .card-outer {
     position: relative;
     overflow: hidden;
