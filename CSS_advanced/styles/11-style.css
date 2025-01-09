@@ -17,12 +17,12 @@
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
-    --section-header-align: center;
-    /* New custom property for horizontal alignment */
+    --section-tagline-transform: uppercase;
 }
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -31,7 +31,6 @@ body {
     color: var(--text-color);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
-    /* Setting minimum height of line boxes */
 }
 
 h1,
@@ -63,8 +62,7 @@ a:hover {
 
 .section-tagline {
     color: var(--color-primary);
-}
-
-.section-header {
-    text-align: var(--section-header-align);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
 }
