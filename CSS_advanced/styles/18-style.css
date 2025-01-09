@@ -28,10 +28,11 @@
     --section-footer-padding: 3rem 0 0;
     --section-footer-align: center;
     --footer-padding: 5rem 0 1rem;
+    --font-size-base: 10px; /* Root element font size for calculations */
     --nav-item-font-family: var(--font-family-title);
     --nav-item-font-weight: var(--font-weight-bold);
     --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: 4%; /* Set to 4% of root element font size */
+    --nav-item-letter-spacing: 0.4em; /* Corrected letter-spacing */
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 3rem 0;
     --nav-item-link-hover: var(--color-primary);
@@ -44,7 +45,7 @@
 }
 
 html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 62.5%; /* 1rem = 10px for easier calculation */
     scroll-behavior: smooth;
 }
 
@@ -148,7 +149,7 @@ a:active {
     font-family: var(--nav-item-font-family);
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing); /* Applied letter-spacing here */
+    letter-spacing: var(--nav-item-letter-spacing); /* Corrected letter-spacing */
     display: var(--nav-item-display);
     margin: var(--nav-item-margin);
 }
